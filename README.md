@@ -46,7 +46,7 @@ In your `olympus.json` file, look for the `"ws"` key under `"audio"` section. Ch
 
 5. What to add to `ngrok.yml`?  
 
-Add this **tunnels** section **before** the `version` and `agent` part 
+Add this **tunnels** section **After** the `version` and `agent` part 
 
 ```yaml
 version: "3"
