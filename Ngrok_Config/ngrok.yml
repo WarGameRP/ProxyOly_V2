@@ -1,0 +1,27 @@
+version: "3"
+agent:
+    authtoken: # put your ngrok authtoken (Finds it on https://dashboard.ngrok.com/get-started/setup/windows) |But you just need the tunnel parts 
+    
+tunnels:
+  web:
+    addr: 3000 # the frontend port, make sure is the same as the proxy.js file
+    proto: http
+    schemes:
+      - https
+    inspect: false
+  api:
+    addr: 4512 # the backend port ,make sure is the same as the proxy.js file
+    proto: http
+    schemes:
+      - https
+    inspect: false
+  audio:
+    addr: 4000   # the Ws (Audio) port ,make sure is the same as the proxy.js file
+    proto: http
+    schemes:
+      - https
+    inspect: false
+
+#More info on readme.md
+
+#Don't forget to execute the command line : ngrok config add-authtoken your-token  , on a Cmd
